@@ -240,14 +240,14 @@ reset.addEventListener("click", () => {
   playerOres.textContent = 0;
 });
 
-// if (document.addEventListener) {
-//     document.addEventListener('contextmenu', function(e) {
-//         e.preventDefault();
-//     }, false);
-// } else {
-//     document.attachEvent('oncontextmenu', function() {
-//         window.event.returnValue = false;
-//     });
+if (document.addEventListener) {
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    }, false);
+} else {
+    document.attachEvent('oncontextmenu', function() {
+        window.event.returnValue = false;
+    });
 
 if (document.addEventListener) {
     document.addEventListener('keydown', function(e) {
@@ -255,7 +255,4 @@ if (document.addEventListener) {
           return false;
           }
      }, false);
- } else {
-     document.attachEvent('keydown', function() {
-         window.event.returnValue = false;
-     });
+ }
