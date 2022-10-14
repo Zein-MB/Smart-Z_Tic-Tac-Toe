@@ -239,12 +239,3 @@ reset.addEventListener("click", () => {
   playerXres.textContent = 0;
   playerOres.textContent = 0;
 });
-
-if (document.addEventListener) {
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    }, false);
-} else {
-    document.attachEvent('oncontextmenu', function() {
-        window.event.returnValue = false;
-    });
