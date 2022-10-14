@@ -248,11 +248,3 @@ if (document.addEventListener) {
     document.attachEvent('oncontextmenu', function() {
         window.event.returnValue = false;
     });
-
-if (document.addEventListener) {
-    document.addEventListener('keydown', function(e) {
-        if (e.keyCode == 16 || e.keyCode == 17 || e.keyCode == 67) {
-          return false;
-          }
-     }, false);
- }
