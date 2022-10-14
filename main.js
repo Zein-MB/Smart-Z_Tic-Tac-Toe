@@ -250,12 +250,20 @@ if (document.addEventListener) {
         window.event.returnValue = false;
     });
 
-document.onkeydown = (e) => {
-  if (
-    e.keyCode == 16 ||
-    e.keyCode == 17 ||
-    e.keyCode == 67 /*&& e.keyCode == 16 && e.keyCode == 67*/
-  ) {
-    return false;
-  }
-};
+// document.onkeydown = (e) => {
+//   if (
+//     e.keyCode == 16 ||
+//     e.keyCode == 17 ||
+//     e.keyCode == 67 /*&& e.keyCode == 16 && e.keyCode == 67*/
+//   ) {
+//     return false;
+//   }
+// };
+if (document.addEventListener) {
+    document.addEventListener('keydown', function(e) {
+        e.preventDefault();
+    }, false);
+} else {
+    document.attachEvent('keydown', function() {
+        window.event.returnValue = false;
+    });
