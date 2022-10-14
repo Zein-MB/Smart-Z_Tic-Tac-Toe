@@ -240,7 +240,15 @@ reset.addEventListener("click", () => {
   playerOres.textContent = 0;
 });
 
-document.oncontextmenu = () => false;
+// document.oncontextmenu = () => false;
+if (document.addEventListener) {
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    }, false);
+} else {
+    document.attachEvent('oncontextmenu', function() {
+        window.event.returnValue = false;
+    });
 
 document.onkeydown = (e) => {
   if (
